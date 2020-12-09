@@ -1,5 +1,5 @@
 export default class App {
-
+    
     sumatoriaSerieUno(numero) {
         let suma = 1;
 
@@ -8,6 +8,7 @@ export default class App {
         }
         return suma;
     }
+
 
     sumatoriaSerieDos(numero) {
         let i = 2;
@@ -25,21 +26,32 @@ export default class App {
         } return suma;
     }
 
+
     esPrimo(numero) {
-        let i = 0;
+        let i = 1;
+        let suma = 0;
 
         do {
-            if(numero % 2 === 0) {
-                return false;
+            if(numero % i === 0) {
+                suma ++;
+                i ++;
 
-            } else if(numero % 2 != 0) {
-                return true;
+            } else {
+                i ++;
             }
 
-            i++;
         }
-         while(i <= numero);
-    }
+         while(i <= numero); 
+
+         if(suma === 2) {
+             return true;
+
+         } else {
+             return false;
+         }
+    } 
+
+    
 
 
 }
@@ -56,5 +68,7 @@ console.log(app.sumatoriaSerieDos(4));
 
 console.log("Probando esPrimo())");
 console.log(app.esPrimo(3));
-console.log(app.esPrimo(4));
+console.log(app.esPrimo(9));
+
+
 
