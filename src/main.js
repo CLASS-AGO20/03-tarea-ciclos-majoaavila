@@ -25,7 +25,22 @@ export default class App {
         } return suma;
     }
 
-    
+    esPrimo(numero) {
+        let i = 0;
+
+        do {
+            if(numero % 2 === 0) {
+                return false;
+
+            } else if(numero % 2 != 0) {
+                return true;
+            }
+
+            i++;
+        }
+         while(i <= numero);
+    }
+
 
 }
 
@@ -40,6 +55,6 @@ console.log(app.sumatoriaSerieDos(1));
 console.log(app.sumatoriaSerieDos(4));
 
 console.log("Probando esPrimo())");
-console.log(app.esPrimo(152));
-console.log(app.esPrimo(2));
+console.log(app.esPrimo(3));
+console.log(app.esPrimo(4));
 
