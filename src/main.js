@@ -51,7 +51,20 @@ export default class App {
          }
     } 
 
-    
+    obtenerMultiplos(inicio, fin) {
+        let i = inicio;
+        let multiplos = "";
+
+        do{
+            if(i % 3 === 0) {
+                multiplos = multiplos + i;
+            } 
+            i = i + 1;
+
+        } while (i <= fin);
+        return multiplos;
+
+    }
 
 
 }
@@ -70,5 +83,6 @@ console.log("Probando esPrimo())");
 console.log(app.esPrimo(3));
 console.log(app.esPrimo(9));
 
-
+console.log("Probando obtenerMultiplos");
+console.log(app.obtenerMultiplos(10, 25));
 
