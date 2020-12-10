@@ -74,14 +74,21 @@ export default class App {
             numero2 = n;
         }
 
-        for(let i = numero2; i >= numero1; i--){
+        for(let i = numero2; i >= numero1; i --){
             if(numero2 % 2 !== 0){
-                impares = impares + "," + numero2;
-                numero2--;
+
+                if(impares === "") {
+                impares = impares + numero2;
+                numero2 --;
 
             } else {
-                numero2--;
+                impares = impares + "," + numero2;
+                numero2 --;
             }
+        } else {
+            numero2 --;
+
+        }
         }
         return impares;
 }
